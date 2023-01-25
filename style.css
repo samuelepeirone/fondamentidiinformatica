@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+:root{
+    --lightarancione: #f2cc8f;
+    --darkarancione: #f4a261;
+    --red: #e07a5f;
+    --white: rgba(255, 255, 255, 0.849);
+}
+body{
+    display: inline-flex;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(242,204,143);
+    background: linear-gradient(90deg, rgba(242,204,143,1) 7%, rgba(244,162,97,1) 100%);
+}
+.card_film{
+    background-color: var(--white);
+    margin: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 25rem;
+}
+.card_film img{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    width: 100%;
+}
+.card_film p{
+    font-weight: 200;
+    margin-bottom: -0.0005rem;
+    margin-top: 1rem;
+}
+.card_film-body{
+    opacity: 1;
+    padding: 2rem;
+}
+.card_film-body i{
+    color: var(--lightarancione)/*#49505796;*/
+}
+.card_film h2{
+    font-family: 'Prata';
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.card_film button, .card_film button:disabled{
+    font-weight: 300;
+    border: none;
+    background: transparent;
+    background-color: var(--red);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 100%;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+.card_film button:hover:enabled{
+    background: transparent;
+    border: 1px solid var(--red);
+    color: var(--red);
+}
