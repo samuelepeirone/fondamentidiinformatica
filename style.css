@@ -6,9 +6,9 @@
     --darkarancione: #f4a261;
     --red: #e07a5f;
     --white: rgba(255, 255, 255, 0.849);
+    --grey: #49505796;
 }
 body{
-    display: inline-flex;
     font-family: 'Poppins', sans-serif;
     background: rgb(242,204,143);
     background: linear-gradient(90deg, rgba(242,204,143,1) 7%, rgba(244,162,97,1) 100%);
@@ -35,12 +35,27 @@ body{
     padding: 2rem;
 }
 .card_film-body i{
-    color: var(--lightarancione)/*#49505796;*/
+    color: var(--lightarancione);
 }
 .card_film h2{
     font-family: 'Prata';
     font-size: 1.5rem;
     font-weight: 200;
+}
+.card_film h3{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.card_film .card_film-body h4{
+    margin-top: 1rem;
+    font-family: 'Prata', sans-serif;
+    color: rgba(0, 0, 0, 0.696);
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+.card_film .trattino{
+    margin-top: -0.3rem;
+    margin-bottom: -0.6rem;
 }
 .card_film button, .card_film button:disabled{
     font-weight: 300;
