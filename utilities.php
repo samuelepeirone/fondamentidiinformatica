@@ -56,7 +56,9 @@
         }
         ?>
         <br><br>
-        <input type="submit" value="Invia" class="submitbutton">
+        <div class="text-center invio">
+            <input type="submit" value="Scopri i risultati! " class="submitbutton text-center"> 
+        </div>
         </form>
         <?php
         mysqli_close($conn);

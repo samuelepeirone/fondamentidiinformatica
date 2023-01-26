@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <h1 class="text-center intro">FILM RECOMMENDER</h1>
+    <h3 class="text-center intro">VALUTA I SEGUENTI FILM E FATTI ISPIRARE DAI NOSTRI CONSIGLI</h3>
+    <P class="intro">Con film recommender, ti consigliamo film in base ai tuoi gusti personali. Non devi far altro che valutare i seguenti film con un voto da 1 a 5 stelle, o premere il pulsante "Non l'ho visto" se ti manca alla tua collezione. Inizia ora!</P>
     <?php
         stampacardfilm();
     ?>
