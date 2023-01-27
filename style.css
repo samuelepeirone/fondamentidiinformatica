@@ -5,20 +5,83 @@
     --lightarancione: #f2cc8f;
     --darkarancione: #f4a261;
     --red: #e07a5f;
+    --redhover: #e07b5fa6;
     --white: rgba(255, 255, 255, 0.849);
+    --whitelesswhite: rgba(255, 255, 255, 0.644);
     --grey: #49505796;
+    --black: #434242;
+    --blue: #86A3B8;
+    --bluemenoblue: #86a3b8af;
+    --yellow: #E8D2A6;
+}
+.title-paragraph{
+    font-weight: 500;
 }
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: var(--yellow);
+    /*
     background: rgb(242,204,143);
     background: linear-gradient(90deg, rgba(242,204,143,1) 7%, rgba(244,162,97,1) 100%);
+    */
+}
+nav{
+    width: 100%;
+    position: fixed;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Prata';
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+nav a{
+    text-decoration: none;
+    color: var(--white);
+}
+nav a:hover{
+    color: var(--whitelesswhite);
+}
+section{
+    padding-top: 6rem;
+}
+footer{
+    background-color: var(--blue);
+    padding: 7.5rem;
+    width: 100%;
+}
+footer p {
+    color: #00000092;
+}
+footer p a{
+    text-decoration: none;
+    font-family: 'Prata';
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #00000092;
+}
+footer p a:hover{
+    color: black;
+}
+.titolopagina{
+    width: 100%;
+    padding: 8rem;
+    text-align: center;
+}
+.titolopagina p{
+    color: var(--black);
+    font-weight: 300;
+}
+.titolocalcolo{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
 }
 .card_film{
     background-color: var(--white);
-    margin: 1rem;
     border-radius: 12px;
     text-align: center;
-    width: 25rem;
 }
 .card_film img{
     border-top-left-radius: 12px;
@@ -69,24 +132,33 @@ body{
     padding-bottom: 0.7rem;
 }
 .card_film button:hover:enabled{
+    background: var(--redhover);
+    color: var(--white);
+}
+.card_film input{
+    font-family: "Prata", sans-serif;
+    margin-top: 0.8rem;
+    border: none;
     background: transparent;
-    border: 1px solid var(--red);
-    color: var(--red);
+    text-align: center;
+    margin-right: -0.89rem;
 }
-h1.intro{
-    padding-top: 0.5rem;
-    font-size: 3rem;
+.salvato_cliccato{
+    background-color: var(--bluemenoblue) !important;
+    color: var(--white) !important;
 }
-h3.intro{
-    font-style:italic ;
-    padding-top: 0.5rem;
-    font-size: 1.5rem;
+.submitbutton{
+    margin-top: 2rem;
+    font-weight: 300;
+    border: none;
+    background: transparent;
+    background-color: var(--red) !important;
+    border-radius: 12px;
+    width: 30rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
 }
-
-.submitbutton:hover{
-    background-color: white;
-}
-
-.intro{
-    padding: 1rem;
+.submitbutton:hover:enabled{
+    background-color: var(--redhover) !important;
+    color: var(--white);
 }
