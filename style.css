@@ -131,8 +131,9 @@ footer p a:hover{
     color: var(--whitelesswhite);
 }
 .card_film .trattino{
-    margin-top: -0.3rem;
+    margin-top: -0.05rem;
     margin-bottom: -0.6rem;
+    color: var(--whitelesswhite);
 }
 .valuta{
     font-size: 0.9rem;
