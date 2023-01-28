@@ -3,23 +3,28 @@
 
 :root{
     --lightarancione: #f2cc8f;
+    --lightarancionehover: #f2cc8fda;
     --darkarancione: #f4a261;
-    --red: #e07a5f;
+    --red: #e07b5fc5;
     --redhover: #e07b5fa6;
     --white: rgba(255, 255, 255, 0.849);
     --whitelesswhite: rgba(255, 255, 255, 0.644);
-    --grey: #49505796;
-    --black: #434242;
+    --grey: #242424f5;
+    --black: #242424;
     --blue: #86A3B8;
     --bluemenoblue: #86a3b8af;
     --yellow: #E8D2A6;
+    --yellowmenoyellow: #e8d2a6d3;
+    --yellowmenoyellowhover: #e8d2a6a3;
 }
 .title-paragraph{
     font-weight: 500;
+    font-family: 'Prata';
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: var(--yellow);
+    background-color: var(--grey);
+    color: var(--white);
     /*
     background: rgb(242,204,143);
     background: linear-gradient(90deg, rgba(242,204,143,1) 7%, rgba(244,162,97,1) 100%);
@@ -27,8 +32,8 @@ body{
 }
 nav{
     width: 100%;
-    position: fixed;
-    background-color: var(--black);
+    /*position: fixed;*/
+    background-color: var(--grey);
     color: var(--white);
     font-family: 'Prata';
     font-size: 1.5rem;
@@ -47,12 +52,13 @@ section{
     padding-top: 6rem;
 }
 footer{
+    margin-top: 4rem;
     background-color: var(--blue);
     padding: 7.5rem;
     width: 100%;
 }
 footer p {
-    color: #00000092;
+    color: #0000005c;
 }
 footer p a{
     text-decoration: none;
@@ -64,24 +70,25 @@ footer p a{
 footer p a:hover{
     color: black;
 }
-.titolopagina{
-    width: 100%;
-    padding: 8rem;
-    text-align: center;
-}
-.titolopagina p{
-    color: var(--black);
-    font-weight: 300;
-}
+.hero {
+    height: 91vh;
+    background-image: url(media/sfondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 .titolocalcolo{
-    width: 100%;
+    margin-top: -4rem;
     padding: 2rem;
+    width: 100%;
     text-align: center;
 }
 .card_film{
-    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.534) 0px 4px 12px;
+    background-color: var(--black);
     border-radius: 12px;
     text-align: center;
+    color: var(--white);
 }
 .card_film img{
     border-top-left-radius: 12px;
@@ -109,16 +116,27 @@ footer p a:hover{
     font-size: 1rem;
     font-weight: 300;
 }
-.card_film .card_film-body h4{
+.card_film h4{
     margin-top: 1rem;
     font-family: 'Prata', sans-serif;
-    color: rgba(0, 0, 0, 0.696);
+    /*color: rgba(0, 0, 0, 0.696);*/
+    color: var(--whitelesswhite);
     font-weight: 200;
     font-size: 0.9rem;
+}
+.card_film h5{
+    font-size: 0.95rem;
+    font-weight: 200;
+    margin-top: 0.75rem;
+    color: var(--whitelesswhite);
 }
 .card_film .trattino{
     margin-top: -0.3rem;
     margin-bottom: -0.6rem;
+}
+.valuta{
+    font-size: 0.9rem;
+    color: var(--whitelesswhite);
 }
 .card_film button, .card_film button:disabled{
     font-weight: 300;
@@ -142,23 +160,52 @@ footer p a:hover{
     background: transparent;
     text-align: center;
     margin-right: -0.89rem;
+    color: var(--yellow);
 }
 .salvato_cliccato{
-    background-color: var(--bluemenoblue) !important;
+    background-color: var(--yellowmenoyellow) !important;
     color: var(--white) !important;
 }
 .submitbutton{
-    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.534) 0px 4px 12px;
+    margin-top: 4rem;
     font-weight: 300;
     border: none;
     background: transparent;
-    background-color: var(--red) !important;
+    background-color: var(--yellowmenoyellow) !important;
     border-radius: 12px;
     width: 30rem;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
 }
 .submitbutton:hover:enabled{
-    background-color: var(--redhover) !important;
+    box-shadow: rgba(0, 0, 0, 0.221) 0px 4px 12px;
+    background-color: var(--yellowmenoyellowhover) !important;
     color: var(--white);
+}
+.Xbutton{
+    width: 100% !important;
+    border-radius: 0 !important;
+    background-color: var(--yellowmenoyellowhover) !important;
+    border-bottom: 1px solid var(--black) !important;
+}
+.Xbutton:hover{
+    background-color: var(--yellowmenoyellow) !important;
+    color: black !important;
+}
+.Xbuttonclicked{
+    box-shadow: rgba(0, 0, 0, 0.534) 0px 4px 12px;
+    background-color: var(--yellowmenoyellow) !important;
+}
+.Xbuttonclicked:hover{
+    box-shadow: rgba(0, 0, 0, 0.221) 0px 4px 12px;
+    background-color: var(--yellowmenoyellowhover) !important;
+    border-bottom: 1px solid var(--black) !important;
+}
+#explainability{
+    padding-top: 0.9rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    display: none;
 }

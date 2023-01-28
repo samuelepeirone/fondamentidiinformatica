@@ -41,7 +41,7 @@
                                 <?php echo $anno; echo " &#8226; "; echo $durata; ?>
                             </h4>
                             <p class="trattino"> - </p>
-                            <p>valuta questo film</p>
+                            <p class="valuta">valuta questo film</p>
                             <div class="rating">
                                 <i class="bi bi-star" id="1star" onclick="starSelector(this.id,<?php echo $i-1; ?>)"></i>
                                 <i class="bi bi-star" id="2star" onclick="starSelector(this.id,<?php echo $i-1; ?>)"></i>
@@ -82,6 +82,7 @@
         $punteggiofilmconsigliato = 0;
         $filmconsigliato = "vuoto";
         $riga_p = mysqli_fetch_assoc($rate_pubblico_table);
+        $distanza = $riga_p["distanza"];
         $riga_u = mysqli_fetch_assoc($utente_rate_table);
         for($i=1; $i<=14; $i++){
             if($riga_p[$i]!=0 && $riga_p[$i]>$punteggiofilmconsigliato && $riga_u[$i]==0){
@@ -90,10 +91,13 @@
                 $utente = $riga_p["id_utente"];
             }
         }
-        return $filmconsigliato;
+        //return $filmconsigliato;
+        $risultati = [$filmconsigliato, $utente, $distanza, $punteggiofilmconsigliato];
+        return $risultati;
     }
     function stampaconsiglio(){
-        $idfilmconsigliato = Raccomanda();
+        $risultati = Raccomanda();
+        $idfilmconsigliato = $risultati[0];
         $conn = connetti("film_recomender");
         $s = "SELECT * FROM mytable WHERE id_film=$idfilmconsigliato";
         $filmconsigliato = mysqli_query($conn, $s);
@@ -104,6 +108,7 @@
         $anno = $riga["ReleaseYear"];
         $id_film = $riga["id_film"];
         $immagine = $riga["img"];
+        $categoria = $riga["Category"];
         ?>
         <div class="card_film">
         <?php
@@ -119,6 +124,15 @@
             <h4>
                 <?php echo $anno; echo " &#8226; "; echo $durata; ?>
             </h4>
+            <p class="trattino">-</p>
+            <h5>
+                <?php echo "Categoria: ".$categoria; ?>
+            </h5>
+        </div>
+        <button id="explainabilitybutton" class="Xbutton" onclick="mostraX()">perchè ti abbiamo consigliato questo?</button>
+        <div id="explainability">
+            <p>l'utente meno distante (<?php echo number_format((float)$risultati[2], 2, '.', ''); ?>) si è rivelato essere quello con id = <?php echo $risultati[1]; ?>
+            , che ha valutato questo film con un voto di <?php echo $risultati[3] ?>/5</p>
         </div>
         <button id="aggiungilista" onclick="aggiungilista()"><i class="bi bi-bookmark" id="iconaggiungi"></i>&nbsp;&nbsp;Aggiungi alla mia lista</button>
     </div>

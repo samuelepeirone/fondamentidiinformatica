@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="titolocalcolo">
-                    <h3 class="text-center title-paragraph">Ecco quello che abbiamo scelto per te: </h3>
+                    <h3 class="text-center title-paragraph text-white">Ecco quello che abbiamo scelto per te: </h3>
                 </div>
             </div>
             <div class="row justify-content-center">

@@ -54,3 +54,7 @@ function aggiungilista(){
     $('#aggiungilista').text("  Salvato!");
     $('#aggiungilista').addClass("salvato_cliccato");
 }
+function mostraX(){
+    $('#explainability').toggle(400);
+    $('#explainabilitybutton').toggleClass("Xbuttonclicked");
+}

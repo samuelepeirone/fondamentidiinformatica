@@ -17,14 +17,18 @@
     <nav>
         <a href="index.php">film recommender</a>
     </nav>
-    <section>
-        <div class="content p-2">
-            <div class="row">
-                <div class="titolopagina">
-                    <h1 class="text-center title-paragraph">Valuta i seguenti film e fatti ispirare dai nostri consigli</h1>
-                    <p>Con film recommender, ti consigliamo film in base ai tuoi gusti personali. <br>Non devi far altro che valutare i seguenti film con un voto da 1 a 5 stelle, o premere il pulsante "Non l'ho visto" se ti manca alla tua collezione. Inizia ora!</p>
-                </div>
+    <header class="hero d-flex justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col col-lg-10">
+                <h1 class="title-paragraph text-center text-white">Valuta i seguenti film e fatti ispirare dai nostri consigli</h1>
+                <p class="text-center text-white" style="margin-top: 1rem; font-weight: 200;">Con film recommender, ti consigliamo film in base ai tuoi gusti personali.<br>
+                                    Non devi far altro che <b>valutare i seguenti film</b> con un voto da 1 a 5 stelle, o premere il pulsante "Non l'ho visto" se ti manca alla tua collezione.
+                <br><br><span style="font-weight: 600; font-size: 1.1rem;"> Inizia ora!</span></p>
             </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
             <?php
                 stampacardfilm();
             ?>
